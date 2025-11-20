@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог аниме | АнимеПлатформа</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="catalog.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Аниме<span>Платформа</span></a>
+                <nav>
+                    <ul>
+                       <li><a href="index.html" class="active">Главная</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="player.html">Плеер</a></li>
+                        <li><a href="ratings.html">Рейтинги</a></li>
+                        <li><a href="https://vk.com/animeplatforms">Сообщество</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-login">Войти</a>
+                    <a href="signup.html" class="btn btn-signup">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Catalog Content -->
+    <section class="catalog-section">
+        <div class="container">
+            <div class="catalog-header">
+                <h1 class="catalog-title">Каталог аниме</h1>
+                <div class="search-bar">
+                    <input type="text" id="catalog-search" placeholder="Поиск аниме...">
+                    <button id="catalog-search-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.3-4.3"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="filters">
+                <select class="filter-select" id="genre-filter">
+                    <option value="">Все жанры</option>
+                    <option value="Сёнен">Сёнен</option>
+                    <option value="Драма">Драма</option>
+                    <option value="Фэнтези">Фэнтези</option>
+                </select>
+                <select class="filter-select" id="year-filter">
+                    <option value="">Все годы</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                </select>
+                <select class="filter-select" id="rating-filter">
+                    <option value="">Любой рейтинг</option>
+                    <option value="9">9+</option>
+                    <option value="8">8+</option>
+                    <option value="7">7+</option>
+                </select>
+                <select class="filter-select" id="sort-filter">
+                    <option value="rating">По рейтингу</option>
+                    <option value="year">По году</option>
+                    <option value="title">По названию</option>
+                </select>
+            </div>
+            
+            <div class="anime-grid" id="catalog-grid">
+                <!-- Anime cards will be loaded by JavaScript -->
+            </div>
+
+            <div class="load-more-container">
+                <button class="btn btn-load-more" id="load-more">Загрузить еще</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Footer content same as index.html -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Anime Modal -->
+    <div class="modal-overlay" id="anime-modal">
+        <!-- Modal content same as index.html -->
+    </div>
+
+    <!-- Player Overlay -->
+    <div class="player-overlay" id="player-overlay">
+        <!-- Player content same as index.html -->
+    </div>
+
+    <!-- В конце body добавьте: -->
+<script src="database.js"></script>
+<script src="anime-data.js"></script>
+<script src="auth.js"></script>
+<script src="player.js"></script>
+<script src="main.js"></script>
+<script src="modal.js"></script>
+<script src="catalog.js"></script>
+</body>
+</html>

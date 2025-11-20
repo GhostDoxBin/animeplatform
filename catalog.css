@@ -1,0 +1,158 @@
+/* Catalog Page Styles */
+.catalog-section {
+    padding: 40px 0;
+    min-height: 80vh;
+}
+
+.catalog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.catalog-title {
+    font-size: 36px;
+    color: #e1e7ef;
+    margin: 0;
+}
+
+.search-bar {
+    display: flex;
+    background: #1a2332;
+    border: 1px solid #2a3a52;
+    border-radius: 25px;
+    overflow: hidden;
+    min-width: 300px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 12px 20px;
+    background: transparent;
+    border: none;
+    color: #e1e7ef;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-bar input::placeholder {
+    color: #8a99b3;
+}
+
+.search-bar button {
+    padding: 12px 20px;
+    background: transparent;
+    border: none;
+    color: #8a99b3;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.search-bar button:hover {
+    color: #6c8cff;
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filter-select {
+    padding: 10px 15px;
+    background: #1a2332;
+    border: 1px solid #2a3a52;
+    border-radius: 8px;
+    color: #e1e7ef;
+    cursor: pointer;
+    transition: all 0.3s;
+    min-width: 150px;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: #6c8cff;
+}
+
+.filter-select:hover {
+    border-color: #6c8cff;
+}
+
+.load-more-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-load-more {
+    background: linear-gradient(90deg, #6c8cff, #ff6b9c);
+    padding: 15px 40px;
+    font-size: 16px;
+}
+
+.btn-load-more:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(108, 140, 255, 0.3);
+}
+
+/* No Results Message */
+.no-results {
+    text-align: center;
+    padding: 60px 20px;
+    color: #8a99b3;
+    grid-column: 1 / -1;
+}
+
+.no-results h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #e1e7ef;
+}
+
+.no-results p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .catalog-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .catalog-title {
+        font-size: 28px;
+        text-align: center;
+    }
+    
+    .search-bar {
+        min-width: auto;
+    }
+    
+    .filters {
+        justify-content: center;
+    }
+    
+    .filter-select {
+        min-width: 120px;
+        flex: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .catalog-section {
+        padding: 20px 0;
+    }
+    
+    .filters {
+        flex-direction: column;
+    }
+    
+    .filter-select {
+        min-width: auto;
+    }
+}
